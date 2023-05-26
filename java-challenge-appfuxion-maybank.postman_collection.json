@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "a00deb23-f0a4-4898-90c2-382e94eaf894",
+		"name": "java-challenge-appfuxion-maybank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13513306"
+	},
+	"item": [
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parameter\": {\r\n        \"data\": {\r\n            \"find\": \"yari\",\r\n            \"maxresult\": 22\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appfuxion/java/challenge/v1.0/maybank/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appfuxion",
+						"java",
+						"challenge",
+						"v1.0",
+						"maybank",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parameter\": {\r\n        \"data\": {\r\n            \"find\": \"yari\",\r\n            \"maxresult\": 22,\r\n            \"filename\": \"yari\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appfuxion/java/challenge/v1.0/maybank/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appfuxion",
+						"java",
+						"challenge",
+						"v1.0",
+						"maybank",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parameter\": {\r\n        \"data\": {\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appfuxion/java/challenge/v1.0/maybank/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appfuxion",
+						"java",
+						"challenge",
+						"v1.0",
+						"maybank",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generatelinkdownload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parameter\": {\r\n        \"data\": {\r\n            \"id\": \"2305261452541sgjd\",\r\n            \"targetpath\": \"C:/Users/BOMBOM/Downloads\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appfuxion/java/challenge/v1.0/maybank/generatelinkdownload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appfuxion",
+						"java",
+						"challenge",
+						"v1.0",
+						"maybank",
+						"generatelinkdownload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downloadfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appfuxion/java/challenge/v1.0/maybank/downloadfile?file=!C%3A%5CUsers%5CBOMBOM%5Cgit%5CMayBank%5Cyari.pdf!C%3A%2FUsers%2FBOMBOM%2FDownloads%2Fyari.pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appfuxion",
+						"java",
+						"challenge",
+						"v1.0",
+						"maybank",
+						"downloadfile"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "!C%3A%5CUsers%5CBOMBOM%5Cgit%5CMayBank%5Cyari.pdf!C%3A%2FUsers%2FBOMBOM%2FDownloads%2Fyari.pdf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

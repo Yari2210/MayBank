@@ -1,0 +1,95 @@
+spring:
+  application:
+    name: maybank
+  activemq:
+    broker-url:
+    username: admin
+    password:
+  jackson:
+    deserialization:
+      READ_UNKNOWN_ENUM_VALUES_AS_NULL: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:9999/
+    username:
+    password:
+    cloudSqlInstance:
+    socketFactory:
+    useSSL: false
+    maxActive: 200
+  jms:
+    brokerURL:
+    username: admin
+    password:
+    maxConnections: 15
+    maximumActiveSessionPerConnection: 15
+    timetolive: 43200000
+    concurrentConsumers: 15
+    maxConcurrentConsumers: 15
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        lob:
+          non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+        globally_quoted_identifiers: true
+        type: trace
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers:
+      group-id:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    properties:
+      schema:
+        registry:
+          url:
+    topics:
+      log: commons.log
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+server:
+  servlet:
+    context-path: /appfuxion/java/challenge/v1.0
+  error:
+    whitelabel:
+      enabled: false
+
+paging:
+  limit: -1
+
+application:
+  properties:
+    submodulename: elasticsearch
+    elasticsearch:
+      host: localhost
+      port: 1222
+  session:
+    check:
+    create:
+controller:
+  mapping:
+    operation:
+      activate: /activate
+      create: /create
+      deactivate: /deactivate
+      delete: /delete
+      retrieve: /retrieve
+      retrieveDetail: /retrievedetail
+      update: /update
+path:
+  ip:
+  location:
+queue:
+  log:
+    master: queue.log.master
