@@ -1,5 +1,5 @@
 FROM openjdk:8
-EXPOSE 8282
+EXPOSE 8080
 #COPY java-images-new.jar /java-images-new.jar
 ADD target/java-images-new.jar java-images-new.jar
 #CMD ["java", "-jar", "/java-images-new.jar"]
