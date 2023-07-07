@@ -14,28 +14,3 @@ spring:
   cloud:
     config:
       enabled: false
----
-spring:
-  profiles: dev-onprem
-  cloud:
-    config:
-      uri: http://localhost:10000
-#      uri: http://172.25.230.123:10001
----
-spring:
-  profiles: dev
-  cloud:
-    config:
-      uri: http://10.174.2.14
----
-spring:
-  profiles: stg
-  cloud:
-    config:
-      uri: http://amala-config-0400
----
-spring:
-  profiles: prd
-  cloud:
-    config:
-      uri: http://amala-config-0102
